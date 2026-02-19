@@ -5,10 +5,6 @@ pipeline {
         maven 'Maven'
     }
 
-    environment {
-        DOCKER_IMAGE = "sreechandanareddy/majorproj:1.0"
-    }
-
     stages {
 
         stage('Clone Code') {
