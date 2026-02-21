@@ -1,58 +1,14 @@
-~# Use lightweight Java image
-FROM openjdk:21-jdk-slim
+# Use official Java runtime
+FROM openjdk:17-jdk-slim
 
-# Create working directory
+# Set working directory
 WORKDIR /app
 
-# Copy jar file into container
-COPY target/*.jar app.jar
+# Copy jar file from target folder
+COPY target/majorproj-1.0-SNAPSHOT.jar app.jar
 
-# Expose application port
+# Expose port (only needed if app runs on port)
 EXPOSE 8080
 
-# Run the jar file
+# Run the jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
-
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
