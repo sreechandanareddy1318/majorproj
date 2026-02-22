@@ -16,5 +16,4 @@ spec:
       - name: myapp
         image: sreechandanareddy/majorproj:latest
         ports:ii
-        - containerPort: 80
-
+        - containerPort: 8080
